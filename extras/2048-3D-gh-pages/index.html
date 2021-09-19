@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>2048 3D - Ulysse Rigaut</title>
+        <meta name="description" content="A 3D clone of the popular 2048 game by Gabriele Cirulli. Join the numbers and get to the 2048 cube!">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <div id="container"></div>
+
+        <div class="hud">
+            <p class="score">Score: <span id="current-score">0</span></p>
+            <p class="score">Best: <span id="best-score">0</span></p>
+            <button onclick="tryAgain();">Try again</button>
+        </div>
+
+        <div id="help" class="popup show">
+            <p>Use your arrow keys and Q, W to move the tiles.</p>
+            <p>You can move around the grid with the mouse.</p>
+            <button onclick="togglePopup('help')">Start!</button>
+        </div>
+
+        <div id="win" class="popup">
+            <p>You win!</p>
+            <button onclick="togglePopup('win')">Continue!</button>
+        </div>
+
+        <div id="gameOver" class="popup">
+            <p>Game over!</p>
+            <button onclick="togglePopup('gameOver'); tryAgain();">Try again!</button>
+        </div>
+
+        <script type="text/javascript" src="lib/three.min.js"></script>
+        <script type="text/javascript" src="lib/Projector.js"></script>
+        <script type="text/javascript" src="lib/CanvasRenderer.js"></script>
+        <script type="text/javascript" src="lib/OrbitControls.js"></script>
+
+        <script type="text/javascript" src="src/textures.js"></script>
+        <script type="text/javascript" src="src/tile.js"></script>
+        <script type="text/javascript" src="src/cell.js"></script>
+        <script type="text/javascript" src="src/grid.js"></script>
+        <script type="text/javascript" src="src/storage.js"></script>
+        <script type="text/javascript" src="src/game.js"></script>
+
+        <script type="text/javascript">
+            function togglePopup(id) {
+                document.getElementById(id).classList.toggle("show");
+            }
+
+            init();
+            mainLoop();
+        </script>
+    </body>
+</html>
