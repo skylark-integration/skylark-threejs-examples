@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>The Claw</title>
+    <link href="style.css" rel="stylesheet"></link>
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.js"
+      integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+      crossorigin="anonymous"></script>
+    <script src="js/webgl-utils.js"></script>
+    <script src="js/webgl-debug.js"></script>
+    <script src="js/cuon-matrix-mod.js"></script>
+    <script src="js/cuon-utils.js"></script>
+    <script src="js/claw.js"></script>
+  </head>
+
+  <body onload="main()">
+    <div id="help">
+      <h1>Confused?</h1>
+      <p>Keyboard</p>
+      <ol>
+        <li>Left Key - moves the claw left</li>
+        <li>Right Key - moves the claw right</li>
+        <li>Spacebar - drops the claw to grab an item</li>
+      </ol>
+      <p>On-Screen Buttons</p>
+      <ol>
+        <li>Left Button - moves the claw left</li>
+        <li>Right Button - moves the claw right</li>
+        <li>Drop Button - drops the claw to grab an item</li>
+      </ol>
+      <p>Mouse</p>
+      <p>Click the claw and drag it where you want. When you release the
+        claw, it will drop and grab an item</p>
+    </div>
+
+    <div id="wrapper">
+      <div id="start">
+        <p id="first">Launch the claw and grab a toy! Use the on-screen buttons, your mouse, or your keyboard to animate the claw and try your luck.</p>
+        <p> Press
+        <input type="button" id="btn" value="A" onclick="startgame()">
+        to Begin</p>
+      </div>
+
+      <div id="game">
+        <div id="top">The Claw</div>
+
+        <div id="canvas">
+          <canvas id="webgl" width="500" height="500">
+          Please use a browser that supports "canvas"
+          </canvas>
+        </div>
+      
+        <div id="buttons">
+          <button type="button" id="drop" onclick="movedown()">Drop</button>
+          <button type="button" id="left" onclick="moveleft()">Left</button>
+          Move
+          <button type="button" id="right" onclick="moveright()">Right</button>
+        </div>
+
+      </div>
+
+      <div id="end">
+        <p>YOU LOSE!</p> 
+        <p id="first">Better luck next time.</p>
+        <p> Press
+        <input type="button" id="btn2" value="R" onclick="reloadPage()">
+        to play again</p>
+      </div>
+
+    </div>
+    
+
+  </body>
+</html> 
+
+<!-- Requirements:
+  EXTRA CREDIT
+* change shape 
+
+  COMPLETED
+* quick user instructions
+* buttons, menus, etc
+* 2 or more movable joints
+* 2 or more distinct objects
+* smooth, continous change of location
+* animation
+* different shapes other than rectangle or cube
+* keyboard interaction
+* change colors smoothly
+* mouse click interaction
+* mouse drag interation
+  -->

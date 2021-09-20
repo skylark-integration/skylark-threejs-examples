@@ -1,0 +1,148 @@
+@font-face { 
+	font-family: 'mario2'; 
+	src: url('fonts/mario2.ttf'); 
+	font-family: 'mario'; 
+	src: url('fonts/mario.ttf');
+}
+
+body {
+	margin: 0px;
+}
+
+/* ------------------------- body of the game --------------------*/
+#top {
+	border-bottom: 70px solid red;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	height: 0;
+	width: 412px;
+	font-family: 'mario';
+	font-size: 50px;
+	color: white;
+	text-align: center;
+}
+
+#canvas {
+	width: 500px;
+	height: 500px;
+	border: solid 6px black;
+}
+
+#game {
+	width: 550px;
+	margin: 0;
+	display: none;
+}
+
+#wrapper {
+	width: 50%;
+	margin: 0 auto;
+}
+
+/* ------------------------- game messages --------------------*/
+#start {
+	font-family: 'mario';
+	margin: 0 auto;
+	font-size: 30px;
+	top: 0px;
+	border: 6px black solid;
+	color: red;
+	text-align: center;
+	display: block;
+}
+
+#end {
+	font-family: 'mario';
+	margin: 0 auto;
+	font-size: 30px;
+	top: 0px;
+	border: 6px black solid;
+	color: red;
+	text-align: center;
+	display: none;
+}
+
+#first {
+	color: black;
+}
+
+#btn, #btn2 {
+	background: green;
+	width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#01c000, #008e00); /* For Safari */
+	background: -o-linear-gradient(#01c000, #008e00); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#01c000, #008e00); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#01c000, #008e00);
+}
+
+#btn2 {
+	background: -webkit-linear-gradient(#0191f4, #073b84); /* For Safari */
+	background: -o-linear-gradient(#0191f4, #073b84); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#0191f4, #073b84); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#0191f4, #073b84);
+}
+
+
+/* ------------------------- buttons --------------------*/
+button {
+	background-color: red;
+}
+
+#buttons {
+	width: 512px;
+	height: 70px;
+	background-color: red;
+}
+
+#drop {
+	background: white;
+	width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin-left: 147px;
+    border: 1px white solid;
+}
+
+#left {
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 29px 40px 29px 0;
+	border-color: transparent #ffffff transparent transparent;
+}
+
+#right {
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 29px 0 29px 40px;
+	border-color: transparent transparent transparent #ffffff;
+}
+
+
+/* ------------------------- help sidebar --------------------*/
+#help {
+	z-index: 2;
+	float: left;
+	width: 220px; 
+	height: auto;
+	padding: 2px;
+	font-family: Century Gothic, sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	border: 8px solid transparent;
+	background-clip: padding-box;
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+	background: url(images/bkgbrush.png);
+	display: none;
+}
+
+#help li, #help p {
+	text-transform: none;
+}
